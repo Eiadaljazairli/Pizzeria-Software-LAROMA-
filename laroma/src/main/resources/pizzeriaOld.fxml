@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="421.0" prefWidth="609.0" stylesheets="@styles.css"
+            xmlns="http://javafx.com/javafx/17.0.2-ea"
+            fx:controller="de.brandenburg.th.se.pizzeria.application.jfx.JFXController" xmlns:fx="http://javafx.com/fxml/1"
+>
+
+    <VBox layoutX="27.0" layoutY="174.0" prefHeight="222.0" prefWidth="187.0" spacing="10">
+        <TextField prefHeight="0.0" prefWidth="173.0" promptText="Suchen Sie nach Ihrem Gericht" styleClass="search-field" />
+        <TextField prefHeight="26.0" prefWidth="225.0" styleClass="search-field" />
+        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" styleClass="search-button" text="Suche" textFill="#cdc83f" />
+        <TitledPane prefHeight="79.0" prefWidth="187.0" text="Id            Name           Datum">
+            <!-- Inhalt des TitledPane -->
+        </TitledPane>
+    </VBox>
+     <Button layoutX="331.0" layoutY="62.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #E96151;" styleClass="menu-button" text="Dessert" />
+   <!--Button layoutX="438.0" layoutY="62.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #E96151;" text="Alkoholfreie Getränke" textFill="WHITE" /-->
+     <Button layoutX="5.0" layoutY="62.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #E96151;" styleClass="menu-button" text="Pizza" />
+   <VBox layoutX="9.0" layoutY="98.0" prefHeight="62.0" prefWidth="100.0">
+      <children>
+         <ImageView fitHeight="62.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../Desktop/Screenshot%202024-05-26%20145931.png" />
+            </image>
+         </ImageView>
+      </children>
+   </VBox>
+   <VBox layoutX="114.0" layoutY="98.0" prefHeight="62.0" prefWidth="100.0">
+      <children>
+         <ImageView fitHeight="60.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../Desktop/Screenshot%202024-05-26%20151740.png" />
+            </image>
+         </ImageView>
+      </children>
+   </VBox>
+   <Button layoutX="114.0" layoutY="62.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #E96151;" text="Pasta" textFill="WHITE" />
+   <!--Button layoutX="224.0" layoutY="62.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #E96151;" text="Salat" textFill="WHITE" /-->
+   <VBox layoutX="224.0" layoutY="99.0" prefHeight="60.0" prefWidth="100.0">
+      <children>
+         <ImageView fitHeight="60.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../Desktop/Screenshot%202024-05-26%20152221.png" />
+            </image>
+         </ImageView>
+      </children>
+   </VBox>
+   <VBox layoutX="439.0" layoutY="98.0" prefHeight="62.0" prefWidth="118.0">
+      <children>
+         <ImageView fitHeight="62.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../Desktop/Screenshot%202024-05-26%20153627.png" />
+            </image>
+         </ImageView>
+      </children>
+   </VBox>
+   <HBox layoutX="5.0" layoutY="14.0" prefHeight="14.0" prefWidth="584.0" style="-fx-background-color: #cdc83f;">
+      <children>
+         <Label fx:id="labelUeberschrift" text="Pizzeria Speisekarte">
+            <font>
+               <Font name="Cambria Bold" size="33.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <VBox layoutX="331.0" layoutY="98.0" prefHeight="62.0" prefWidth="100.0">
+      <children>
+         <ImageView fitHeight="60.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../Desktop/Screenshot%202024-05-26%20154539.png" />
+            </image>
+         </ImageView>
+      </children>
+   </VBox>
+</AnchorPane>

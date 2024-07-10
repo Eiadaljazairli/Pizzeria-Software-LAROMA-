@@ -1,0 +1,108 @@
+@startuml
+
+class de.brandenburg.th.se.pizzeria.application.jfx.JFXController {
+	{field} -labelKategorie : javafx.scene.control.Label
+	{field} -labelUeberschrift : javafx.scene.control.Label
+	{field} -speiseLabelsContainer : javafx.scene.layout.VBox
+	{method} ~initialize () : void
+	{method} -showDessert () : void
+	{method} -showPasta () : void
+	{method} -showPizza () : void
+}
+
+
+class de.brandenburg.th.se.pizzeria.application.jfx.MainJFXView {
+	{method}  {static} +main ( paramString;1 : [Ljava.lang.String; ) : void
+	{method} +start ( paramStage1 : javafx.stage.Stage ) : void
+}
+
+
+class de.brandenburg.th.se.pizzeria.domain.Pizzeria {
+	{method}  {static} +main ( paramString;1 : [Ljava.lang.String; ) : void
+}
+
+
+class de.brandenburg.th.se.pizzeria.domain.speisekarte.Dessert {
+	{method} #berechnePreis () : int
+}
+
+
+abstract class de.brandenburg.th.se.pizzeria.domain.speisekarte.Gericht {
+	{field} #id : String
+	{field} #nummer : int
+	{field} #preis : int
+	{method}  {abstract} #berechnePreis () : int
+	{method} +toString () : String
+	{method} +zutatHinzufuegen ( paramZutat1 : de.brandenburg.th.se.pizzeria.domain.speisekarte.Zutat ) : void
+}
+
+
+class de.brandenburg.th.se.pizzeria.domain.speisekarte.Groesse {
+	{field} -name : String
+	{method} +toString () : String
+}
+
+
+class de.brandenburg.th.se.pizzeria.domain.speisekarte.Image {
+	{field} -dateipfad : String
+	{method} +laden () : [B
+}
+
+
+class de.brandenburg.th.se.pizzeria.domain.speisekarte.Pasta {
+	{method} #berechnePreis () : int
+	{method} +parmesanHinzufuegen ( paramZutat1 : de.brandenburg.th.se.pizzeria.domain.speisekarte.Zutat ) : void
+	{method} +zutatHinzufuegen ( paramZutat1 : de.brandenburg.th.se.pizzeria.domain.speisekarte.Zutat ) : void
+}
+
+
+class de.brandenburg.th.se.pizzeria.domain.speisekarte.Pizza {
+	{method} #berechnePreis () : int
+	{method} +setGroesse ( paramGroesse1 : de.brandenburg.th.se.pizzeria.domain.speisekarte.Groesse ) : void
+	{method} +toString () : String
+	{method} +werfen () : void
+	{method} +zutatHinzufuegen ( paramZutat1 : de.brandenburg.th.se.pizzeria.domain.speisekarte.Zutat ) : void
+}
+
+
+class de.brandenburg.th.se.pizzeria.domain.speisekarte.PizzaGroesse {
+	{method} +toString () : String
+}
+
+
+class de.brandenburg.th.se.pizzeria.domain.speisekarte.Speise {
+	{field} -name : String
+	{field} -preis : float
+}
+
+
+class de.brandenburg.th.se.pizzeria.domain.speisekarte.Speisekarte {
+	{field} -name : String
+	{method} +addGericht ( paramGericht1 : de.brandenburg.th.se.pizzeria.domain.speisekarte.Gericht ) : void
+	{method} +addSpeise ( paramSpeise1 : de.brandenburg.th.se.pizzeria.domain.speisekarte.Speise ) : void
+	{method} +getSpeisen () : [Lde.brandenburg.th.se.pizzeria.domain.speisekarte.Speise;
+	{method} +toString () : String
+}
+
+
+class de.brandenburg.th.se.pizzeria.domain.speisekarte.Zutat {
+	{field} -name : String
+	{field} -preis : int
+	{method} +toString () : String
+}
+
+
+
+
+de.brandenburg.th.se.pizzeria.domain.speisekarte.Dessert --|>  de.brandenburg.th.se.pizzeria.domain.speisekarte.Gericht
+de.brandenburg.th.se.pizzeria.domain.speisekarte.Gericht "1" o-- "0..*"  de.brandenburg.th.se.pizzeria.domain.speisekarte.Zutat : zutaten
+de.brandenburg.th.se.pizzeria.domain.speisekarte.Gericht -->  de.brandenburg.th.se.pizzeria.domain.speisekarte.Groesse : groesse
+de.brandenburg.th.se.pizzeria.domain.speisekarte.Pasta --|>  de.brandenburg.th.se.pizzeria.domain.speisekarte.Gericht
+de.brandenburg.th.se.pizzeria.domain.speisekarte.Pizza --|>  de.brandenburg.th.se.pizzeria.domain.speisekarte.Gericht
+de.brandenburg.th.se.pizzeria.domain.speisekarte.PizzaGroesse --|>  de.brandenburg.th.se.pizzeria.domain.speisekarte.Groesse
+de.brandenburg.th.se.pizzeria.domain.speisekarte.Speisekarte "1" o-- "0..*"  de.brandenburg.th.se.pizzeria.domain.speisekarte.Gericht : desserts
+de.brandenburg.th.se.pizzeria.domain.speisekarte.Speisekarte "1" o-- "0..*"  de.brandenburg.th.se.pizzeria.domain.speisekarte.Gericht : pastas
+de.brandenburg.th.se.pizzeria.domain.speisekarte.Speisekarte "1" o-- "0..*"  de.brandenburg.th.se.pizzeria.domain.speisekarte.Gericht : pizzas
+
+
+@enduml

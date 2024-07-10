@@ -1,0 +1,27 @@
+/* styles.css */
+.title-label {
+        -fx-font-size: 20px;
+        -fx-text-fill: #333;
+}
+
+.menu-button {
+        -fx-background-color: #ff6347;
+        -fx-text-fill: white;
+        -fx-font-size: 14px;
+        -fx-border-radius: 5px;
+        -fx-padding: 5px 10px;
+}
+
+.search-field {
+        -fx-border-color: #ccc;
+        -fx-border-radius: 5px;
+        -fx-padding: 5px;
+}
+
+.search-button {
+        -fx-background-color: #4682b4;
+        -fx-text-fill: white;
+        -fx-font-size: 14px;
+        -fx-border-radius: 5px;
+        -fx-padding: 5px 10px;
+}

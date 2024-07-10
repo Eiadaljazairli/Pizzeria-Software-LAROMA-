@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="421.0" prefWidth="609.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.brandenburg.th.se.pizzeria.application.jfx.JFXController">
+
+   <VBox layoutX="27.0" layoutY="174.0" prefHeight="222.0" prefWidth="187.0" spacing="10">
+      <Label fx:id="labelKategorie" prefHeight="18.0" prefWidth="186.0" text="Kategorie auswählen" />
+      <TextField prefHeight="26.0" prefWidth="225.0" promptText="Nummer" styleClass="search-field" />
+      <TextField prefHeight="26.0" prefWidth="173.0" promptText="Name" styleClass="search-field" />
+      <TextField prefHeight="26.0" prefWidth="120.0" promptText="Größe" />
+      <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="131.0" styleClass="search-button" text="Hinzufügen" textFill="#cdc83f" />
+   </VBox>
+
+   <Button layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#showPizza" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #E96151;" styleClass="menu-button" text="Pizza" />
+   <Button layoutX="121.0" layoutY="77.0" mnemonicParsing="false" onAction="#showPasta" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #E96151;" styleClass="menu-button" text="Pasta" textFill="WHITE" />
+   <Button layoutX="231.0" layoutY="77.0" mnemonicParsing="false" onAction="#showDessert" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #E96151;" styleClass="menu-button" text="Dessert" textFill="WHITE" />
+
+   <HBox layoutX="5.0" layoutY="14.0" prefHeight="50.0" prefWidth="584.0" style="-fx-background-color: #cdc83f;">
+      <Label fx:id="labelUeberschrift" style="-fx-font-family: 'Cambria'; -fx-font-size: 33.0;" text="Pizzeria Speisekarte" />
+   </HBox>
+
+   <VBox fx:id="speiseLabelsContainer" layoutX="240.0" layoutY="113.0" prefHeight="271.0" prefWidth="346.0">
+   </VBox>
+</AnchorPane>
