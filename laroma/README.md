@@ -120,10 +120,6 @@ Definieren von Verantwortlichkeiten und Eskalationspfaden für technische Proble
 
 ## 15. Projektbeteiligte
 - **Projektleiter:** Eiad Abdulmomenaljazairli
-- **Software-Architekt:** Loran Solaiman
-- **Entwickler:** Mohammad Al Saadi
-- **Frontend-Entwickler:** Ola Abdulhafiz
-- **Tester:** Mohammed Yazan Ajjawi, Mahmoud Arbash
 
 ## 16. Glossar
 - **JavaFX:** Ein Framework für die Entwicklung von Desktop-Anwendungen in Java.
